@@ -96,6 +96,25 @@
             background: rgba(0, 0, 0, 0.04);
             border-color: rgba(0, 0, 0, 0.4);
         }
+
+        /* Logo Hover Animation */
+        .logo-container {
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transform-origin: left center;
+        }
+        .logo-container:hover {
+            transform: scale(1.05);
+        }
+        .logo-container:hover .logo-text {
+            letter-spacing: 0.18em;
+        }
+        .logo-text {
+            display: inline-block;
+            transition: letter-spacing 0.4s ease;
+        }
+        .logo-container:hover .text-gradient-bw {
+            animation: shine 1.5s linear infinite; /* Speeds up the shine effect on hover */
+        }
     </style>
 </head>
 <body class="font-sans antialiased selection:bg-black selection:text-white">
@@ -103,8 +122,8 @@
     <nav class="fixed w-full z-50 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-black/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
-                    <span class="font-black text-2xl tracking-widest text-black uppercase">Haha<span class="text-gradient-bw">kaar</span></span>
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer logo-container">
+                    <span class="logo-text font-black text-2xl tracking-widest text-black uppercase">Haha<span class="text-gradient-bw">kaar</span></span>
                 </div>
                 <div class="hidden md:flex space-x-8 items-center">
                     <a href="#services" class="text-gray-600 hover:text-black font-medium text-sm uppercase tracking-wide transition-colors">Services</a>
@@ -525,8 +544,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-10 mb-12">
                 <div class="col-span-1 lg:col-span-2">
-                    <div class="flex items-center gap-2 mb-6">
-                        <span class="font-black text-2xl tracking-widest text-black uppercase">Haha<span class="text-gradient-bw">kaar</span></span>
+                    <div class="flex items-center gap-2 mb-6 cursor-pointer logo-container w-max">
+                        <span class="logo-text font-black text-2xl tracking-widest text-black uppercase">Haha<span class="text-gradient-bw">kaar</span></span>
                     </div>
                     <p class="text-gray-500 mb-6 max-w-sm text-sm leading-relaxed">Your complete business growth partner. Build, brand, and grow your empire with our comprehensive solutions.</p>
                 </div>
