@@ -1,210 +1,567 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HAHAKAAR | Performance Marketing Agency</title>
-<meta name="description" content="Performance Marketing, Marketplace Growth, SEO, Analytics and eCommerce Scaling.">
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,Arial,sans-serif}
-html{scroll-behavior:smooth}
-body{
-background:#050505;
-color:#fff;
-line-height:1.7;
-overflow-x:hidden;
-}
-body:before{
-content:"";
-position:fixed;
-inset:0;
-background:
-radial-gradient(circle at 20% 20%,rgba(255,255,255,.08),transparent 30%),
-radial-gradient(circle at 80% 70%,rgba(255,255,255,.05),transparent 35%);
-pointer-events:none;
-z-index:-1;
-}
-.container{width:min(1200px,92%);margin:auto}
-.gradient{
-background:linear-gradient(90deg,#fff,#bdbdbd,#707070,#fff);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
-nav{
-display:flex;justify-content:space-between;align-items:center;
-padding:30px 0;
-}
-.logo{font-size:2rem;font-weight:900;letter-spacing:4px}
-nav ul{display:flex;gap:30px;list-style:none}
-nav a{text-decoration:none;color:#fff}
-.hero{
-min-height:90vh;
-display:flex;
-align-items:center;
-text-align:center;
-}
-.hero-content{width:100%}
-.hero h1{
-font-size:clamp(4rem,9vw,8rem);
-line-height:.95;
-margin-bottom:20px;
-}
-.hero p{max-width:800px;margin:auto;color:#b0b0b0}
-.btn{
-display:inline-block;
-padding:16px 30px;
-border-radius:999px;
-margin:30px 10px 0;
-text-decoration:none;
-font-weight:700;
-}
-.primary{
-background:linear-gradient(135deg,#fff,#999);
-color:#000;
-}
-.secondary{
-border:1px solid rgba(255,255,255,.15);
-color:#fff;
-}
-section{padding:100px 0}
-.section-title{
-font-size:3rem;
-text-align:center;
-margin-bottom:15px;
-}
-.section-sub{
-text-align:center;
-max-width:700px;
-margin:0 auto 50px;
-color:#9c9c9c;
-}
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:24px;
-}
-.card{
-background:rgba(255,255,255,.04);
-backdrop-filter:blur(10px);
-border:1px solid rgba(255,255,255,.08);
-border-radius:28px;
-padding:30px;
-}
-.stats .card{text-align:center}
-.stats h2{font-size:2.5rem}
-.founder{
-display:grid;
-grid-template-columns:220px 1fr;
-gap:30px;
-align-items:center;
-}
-.founder img,.member img{
-width:180px;height:180px;border-radius:50%;
-object-fit:cover;background:#222;
-border:3px solid rgba(255,255,255,.1);
-}
-.member{text-align:center}
-.cta{text-align:center}
-footer{
-border-top:1px solid rgba(255,255,255,.08);
-padding:40px 0;
-text-align:center;
-color:#888;
-}
-@media(max-width:768px){
-nav ul{display:none}
-.founder{grid-template-columns:1fr;text-align:center}
-.hero h1{font-size:3.5rem}
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HaHaKaar Business Solutions | Complete Business Growth Partner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        black: '#000000',
+                        white: '#ffffff',
+                        gray: {
+                            900: '#111111',
+                            800: '#222222',
+                            700: '#333333',
+                            600: '#555555',
+                            500: '#777777',
+                            400: '#999999',
+                            300: '#bbbbbb',
+                            200: '#dddddd',
+                            100: '#eeeeee',
+                            50: '#fafafa',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #111111;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: radial-gradient(circle at 20% 20%, rgba(0,0,0,.03), transparent 30%),
+                        radial-gradient(circle at 80% 70%, rgba(0,0,0,.02), transparent 35%);
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .text-gradient-bw {
+            background: linear-gradient(to right, #000000, #666666, #000000);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% auto;
+            animation: shine 5s linear infinite;
+        }
+        @keyframes shine {
+            to {
+                background-position: 200% center;
+            }
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.03);
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 0, 0, 0.15);
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.08);
+        }
+        
+        .btn-gradient {
+            background: linear-gradient(135deg, #111111 0%, #333333 100%);
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+        .btn-gradient:hover {
+            background: linear-gradient(135deg, #000000 0%, #000000 100%);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .btn-outline {
+            background: transparent;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            color: #000000;
+            transition: all 0.3s ease;
+        }
+        .btn-outline:hover {
+            background: rgba(0, 0, 0, 0.04);
+            border-color: rgba(0, 0, 0, 0.4);
+        }
+    </style>
 </head>
-<body>
-<div class="container">
+<body class="font-sans antialiased selection:bg-black selection:text-white">
 
-<nav>
-<div class="logo">HAHA<span class="gradient">KAAR</span></div>
-<ul>
-<li><a href="#services">Services</a></li>
-<li><a href="#team">Team</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-black/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+                    <span class="font-black text-2xl tracking-widest text-black uppercase">Haha<span class="text-gradient-bw">kaar</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#services" class="text-gray-600 hover:text-black font-medium text-sm uppercase tracking-wide transition-colors">Services</a>
+                    <a href="#why-us" class="text-gray-600 hover:text-black font-medium text-sm uppercase tracking-wide transition-colors">Why Us</a>
+                    <a href="#team" class="text-gray-600 hover:text-black font-medium text-sm uppercase tracking-wide transition-colors">Team</a>
+                    <a href="#pricing" class="text-gray-600 hover:text-black font-medium text-sm uppercase tracking-wide transition-colors">Pricing</a>
+                </div>
+                <div class="hidden md:flex">
+                    <a href="#contact" class="btn-gradient px-6 py-2.5 rounded-full font-bold text-sm tracking-wide uppercase">Consultation</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-black hover:text-gray-600 focus:outline-none">
+                        <i class="ph ph-list text-3xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-<section class="hero">
-<div class="hero-content">
-<h1>Performance Marketing That<br><span class="gradient">Scales Revenue.</span></h1>
-<p>Meta Ads • Google Ads • Amazon Growth • SEO • Analytics • Marketplace Management • CRO</p>
-<a href="#contact" class="btn primary">Book Strategy Call</a>
-<a href="#services" class="btn secondary">Explore Services</a>
-</div>
-</section>
+    <section class="relative pt-40 pb-24 lg:pt-56 lg:pb-32 overflow-hidden border-b border-black/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="inline-block py-1 px-4 rounded-full bg-black/5 border border-black/10 text-gray-700 text-xs font-bold tracking-[0.2em] mb-8 uppercase">
+                Build. Brand. Grow.
+            </span>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-black tracking-tighter leading-[1.1] mb-8">
+                Your Complete <br/>
+                <span class="text-gradient-bw">Business Growth Partner</span>
+            </h1>
+            <p class="mt-4 max-w-3xl mx-auto text-lg md:text-xl text-gray-600 mb-12 leading-relaxed font-light">
+                From business registration to branding, marketing, e-commerce, compliance, websites, and automation — we handle everything your business needs to grow.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="#contact" class="btn-gradient px-8 py-4 rounded-full font-bold text-base uppercase tracking-wider flex items-center justify-center gap-2">
+                    Get Free Consultation <i class="ph-bold ph-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn-outline px-8 py-4 rounded-full font-bold text-base uppercase tracking-wider flex items-center justify-center gap-2">
+                    Book a Strategy Call
+                </a>
+            </div>
+        </div>
+    </section>
 
-<section class="stats">
-<div class="grid">
-<div class="card"><h2>150+</h2><p>Brands Scaled</p></div>
-<div class="card"><h2>₹100Cr+</h2><p>Revenue Influenced</p></div>
-<div class="card"><h2>1000+</h2><p>Campaigns Managed</p></div>
-</div>
-</section>
+    <section id="services" class="py-24 relative border-b border-black/5 bg-gray-50/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <h2 class="text-4xl md:text-5xl font-black mb-6 text-gradient-bw tracking-tight">Our Services</h2>
+                <p class="text-lg text-gray-600 font-light">Comprehensive solutions designed to build, scale, and optimize your business.</p>
+            </div>
 
-<section id="services">
-<h2 class="section-title gradient">Services</h2>
-<p class="section-sub">Growth solutions for ambitious brands.</p>
-<div class="grid">
-<div class="card"><h3>Meta Advertising</h3><p>ROI focused Facebook & Instagram campaigns.</p></div>
-<div class="card"><h3>Google Advertising</h3><p>Search, Shopping, Display & YouTube Ads.</p></div>
-<div class="card"><h3>Marketplace Growth</h3><p>Amazon, Flipkart, JioMart & Shopify scaling.</p></div>
-<div class="card"><h3>SEO</h3><p>Technical SEO and organic growth.</p></div>
-<div class="card"><h3>Analytics</h3><p>GA4, GTM and attribution systems.</p></div>
-<div class="card"><h3>Creative Studio</h3><p>Ad creatives, graphics and branding.</p></div>
-</div>
-</section>
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+                <!-- Service 1 -->
+                <div class="glass-card rounded-2xl p-8 flex flex-col h-full bg-white">
+                    <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-6 text-black border border-gray-200">
+                        <i class="ph ph-rocket text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-4">Business Setup & Compliance</h3>
+                    <ul class="text-gray-600 space-y-3 mb-6 flex-grow text-sm">
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check mt-1 text-black"></i> GST Registration</li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check mt-1 text-black"></i> MSME Registration</li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check mt-1 text-black"></i> Company & LLP Formation</li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check mt-1 text-black"></i> Trademark Registration</li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check mt-1 text-black"></i> Business Licenses</li>
+                    </ul>
+                </div>
 
-<section>
-<h2 class="section-title gradient">Founder</h2>
-<div class="card founder">
-<img src="https://www.dropbox.com/scl/fi/7qobl0hi4u4j5wxawicuq/Yogesh.png?rlkey=6avzx5ujf958lu4pgw3bexybc&st=30iflg0q&dl=1" alt="Yogesh">
-<div>
-<h2>Yogesh Meena</h2>
-<p>Founder & Growth Strategist</p><br>
-<p>Yogesh Meena is a performance marketing and eCommerce growth specialist with extensive experience helping brands scale across Amazon, Flipkart, JioMart, Shopify, GeM and other leading marketplaces. He has successfully managed multi-crore advertising budgets, optimized thousands of product listings, and developed data-driven growth strategies that deliver measurable business results.</p><br>
-<p><strong>With expertise spanning Marketplace Management, Amazon PPC, Meta Ads, Google Ads, SEO, Analytics and Conversion Optimization, Yogesh focuses on building sustainable growth engines that maximize revenue, profitability and customer lifetime value.</strong></p>
-</div>
-</div>
-</section>
+                <!-- Service 2 -->
+                <div class="glass-card rounded-2xl p-8 flex flex-col h-full bg-white">
+                    <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-6 text-black border border-gray-200">
+                        <i class="ph ph-bezier-curve text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-4">Branding & Creative Design</h3>
+                    <ul class="text-gray-600 space-y-3 mb-6 flex-grow text-sm">
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check mt-1 text-black"></i> Logo Design</li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check mt-1 text-black"></i> Brand Identity</li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check mt-1 text-black"></i> Packaging Design</li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check mt-1 text-black"></i> Product Labels</li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check mt-1 text-black"></i> Marketing Collateral</li>
+                    </ul>
+                </div>
 
-<section id="team">
-<h2 class="section-title gradient">Meet The Team</h2>
-<div class="grid">
-<div class="card member"><img src="https://www.dropbox.com/scl/fi/qcj6ooinamyzdedvu9mmh/Jayshree.png?rlkey=xkpsfaoqsdhkehrs5hjzc31od&st=b29jfd1y&dl=1"><h3>Jayshree Jangir</h3><p>Performance Marketing Lead</p></div>
-<div class="card member"><img src="https://www.dropbox.com/scl/fi/sfucxlwbdd0l37uwonr9j/Manish.png?rlkey=2j8rsyfymxqmgbfw329dedsf7&st=rx4rc3am&dl=1"><h3>Manish Dakha</h3><p>Finance Head</p></div>
-<div class="card member"><img src="https://www.dropbox.com/scl/fi/22pyut8cpt8sww73qpo8l/Jitendra.png?rlkey=zff0upau5p60fttuv5g7tbjvr&st=fr2bx3s6&dl=1"><h3>Jitendra Tatu</h3><p>Technical Consultant</p></div>
-<div class="card member"><img src="https://www.dropbox.com/scl/fi/dwc6aslicglp0zwzypd1z/Tiny.png?rlkey=5rsrlmmthvawh1fom8653yrwk&st=vlmyk5hm&dl=1"><h3>Lucas</h3><p>Web/App Developer</p></div>
-</div>
-</section>
+                <!-- Service 3 -->
+                <div class="glass-card rounded-2xl p-8 flex flex-col h-full bg-white">
+                    <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-6 text-black border border-gray-200">
+                        <i class="ph ph-trend-up text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-4">Digital Marketing</h3>
+                    <ul class="text-gray-600 space-y-3 mb-6 flex-grow text-sm">
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check mt-1 text-black"></i> Social Media Management</li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check mt-1 text-black"></i> Meta Ads</li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check mt-1 text-black"></i> Google Ads</li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check mt-1 text-black"></i> SEO</li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check mt-1 text-black"></i> Content Creation & Video</li>
+                    </ul>
+                </div>
 
-<section>
-<h2 class="section-title gradient">Testimonials</h2>
-<div class="grid">
-<div class="card">★★★★★<br><br>Helped scale revenue and improve ROAS significantly.</div>
-<div class="card">★★★★★<br><br>Professional team with deep marketplace expertise.</div>
-<div class="card">★★★★★<br><br>Transparent reporting and measurable growth.</div>
-</div>
-</section>
+                <!-- Service 4 -->
+                <div class="glass-card rounded-2xl p-8 flex flex-col h-full bg-white">
+                    <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-6 text-black border border-gray-200">
+                        <i class="ph ph-shopping-bag text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-4">E-commerce Solutions</h3>
+                    <ul class="text-gray-600 space-y-3 mb-6 flex-grow text-sm">
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check mt-1 text-black"></i> Amazon Account Setup</li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check mt-1 text-black"></i> Product Listing Opt.</li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check mt-1 text-black"></i> A+ Content Design</li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check mt-1 text-black"></i> PPC Advertising</li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check mt-1 text-black"></i> Catalog Management</li>
+                    </ul>
+                </div>
 
-<section id="contact">
-<div class="card cta">
-<h2 class="gradient">Ready To Grow Faster?</h2><br>
-<p>Let's build your next growth engine.</p><br>
-<p><strong>marketing@hahakaar.com</strong></p>
-<p>Sitapura, Jaipur, Rajasthan 302022</p>
-</div>
-</section>
+                <!-- Service 5 -->
+                <div class="glass-card rounded-2xl p-8 flex flex-col h-full bg-white">
+                    <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-6 text-black border border-gray-200">
+                        <i class="ph ph-monitor text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-4">Website Development</h3>
+                    <ul class="text-gray-600 space-y-3 mb-6 flex-grow text-sm">
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check mt-1 text-black"></i> Business Websites</li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check mt-1 text-black"></i> E-commerce Stores</li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check mt-1 text-black"></i> Landing Pages</li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check mt-1 text-black"></i> Portfolio Websites</li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check mt-1 text-black"></i> Website Maintenance</li>
+                    </ul>
+                </div>
 
-<footer>
-© 2026 HAHAKAAR • Performance Marketing • Marketplace Growth • SEO
-</footer>
+                <!-- Service 6 -->
+                <div class="glass-card rounded-2xl p-8 flex flex-col h-full bg-white">
+                    <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-6 text-black border border-gray-200">
+                        <i class="ph ph-cpu text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-4">Automation & Technology</h3>
+                    <ul class="text-gray-600 space-y-3 mb-6 flex-grow text-sm">
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check mt-1 text-black"></i> WhatsApp Automation</li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check mt-1 text-black"></i> CRM Setup</li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check mt-1 text-black"></i> Lead Management Systems</li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check mt-1 text-black"></i> Business Process Automation</li>
+                    </ul>
+                </div>
 
-</div>
+                <!-- Service 7 -->
+                <div class="glass-card rounded-2xl p-8 flex flex-col h-full bg-white">
+                    <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-6 text-black border border-gray-200">
+                        <i class="ph ph-handshake text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-4">Sales & Lead Generation</h3>
+                    <ul class="text-gray-600 space-y-3 mb-6 flex-grow text-sm">
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check mt-1 text-black"></i> B2B Lead Generation</li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check mt-1 text-black"></i> Sales Funnels</li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check mt-1 text-black"></i> Email Marketing</li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check mt-1 text-black"></i> Customer Acquisition</li>
+                    </ul>
+                </div>
+
+                <!-- Service 8 -->
+                <div class="glass-card rounded-2xl p-8 flex flex-col h-full bg-white">
+                    <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-6 text-black border border-gray-200">
+                        <i class="ph ph-calculator text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-4">Accounting & Support</h3>
+                    <ul class="text-gray-600 space-y-3 mb-6 flex-grow text-sm">
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check mt-1 text-black"></i> GST Filing</li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check mt-1 text-black"></i> Accounting Support</li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check mt-1 text-black"></i> Payroll Management</li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check mt-1 text-black"></i> Financial Reports</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-us" class="py-24 relative overflow-hidden border-b border-black/5 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-black mb-6 text-gradient-bw">Everything Under One Roof</h2>
+                    <p class="text-xl text-gray-600 mb-10 font-light">
+                        Instead of hiring multiple agencies, get all your business services from a single trusted partner.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex items-center gap-3 bg-gray-50 p-4 rounded-xl border border-gray-200">
+                            <i class="ph-bold ph-check text-xl text-black"></i>
+                            <span class="font-medium text-gray-800">Dedicated Account Manager</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-gray-50 p-4 rounded-xl border border-gray-200">
+                            <i class="ph-bold ph-check text-xl text-black"></i>
+                            <span class="font-medium text-gray-800">Affordable Monthly Plans</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-gray-50 p-4 rounded-xl border border-gray-200">
+                            <i class="ph-bold ph-check text-xl text-black"></i>
+                            <span class="font-medium text-gray-800">Fast Turnaround Time</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-gray-50 p-4 rounded-xl border border-gray-200">
+                            <i class="ph-bold ph-check text-xl text-black"></i>
+                            <span class="font-medium text-gray-800">Expert Team</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-gray-50 p-4 rounded-xl border border-gray-200">
+                            <i class="ph-bold ph-check text-xl text-black"></i>
+                            <span class="font-medium text-gray-800">Transparent Pricing</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-gray-50 p-4 rounded-xl border border-gray-200">
+                            <i class="ph-bold ph-check text-xl text-black"></i>
+                            <span class="font-medium text-gray-800">Growth-Focused Approach</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-10 rounded-3xl bg-gray-50">
+                    <h3 class="text-2xl font-bold mb-8 text-black border-b border-gray-200 pb-4">Industries We Serve</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-6 py-3 rounded-full bg-white border border-gray-200 text-gray-700 text-sm font-medium hover:border-black transition-colors shadow-sm">Manufacturers</span>
+                        <span class="px-6 py-3 rounded-full bg-white border border-gray-200 text-gray-700 text-sm font-medium hover:border-black transition-colors shadow-sm">Retail Businesses</span>
+                        <span class="px-6 py-3 rounded-full bg-white border border-gray-200 text-gray-700 text-sm font-medium hover:border-black transition-colors shadow-sm">Startups</span>
+                        <span class="px-6 py-3 rounded-full bg-white border border-gray-200 text-gray-700 text-sm font-medium hover:border-black transition-colors shadow-sm">D2C Brands</span>
+                        <span class="px-6 py-3 rounded-full bg-white border border-gray-200 text-gray-700 text-sm font-medium hover:border-black transition-colors shadow-sm">Amazon Sellers</span>
+                        <span class="px-6 py-3 rounded-full bg-white border border-gray-200 text-gray-700 text-sm font-medium hover:border-black transition-colors shadow-sm">Service Providers</span>
+                        <span class="px-6 py-3 rounded-full bg-white border border-gray-200 text-gray-700 text-sm font-medium hover:border-black transition-colors shadow-sm">Educational Institutions</span>
+                        <span class="px-6 py-3 rounded-full bg-white border border-gray-200 text-gray-700 text-sm font-medium hover:border-black transition-colors shadow-sm">Healthcare Businesses</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 border-b border-black/5 bg-gray-50/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <h2 class="text-4xl md:text-5xl font-black mb-6 text-gradient-bw">How We Work</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+                <!-- Connecting line for desktop -->
+                <div class="hidden md:block absolute top-10 left-[12%] right-[12%] h-px bg-black/10 z-0"></div>
+                
+                <div class="relative z-10 text-center flex flex-col items-center">
+                    <div class="w-20 h-20 bg-white border border-gray-200 rounded-full flex items-center justify-center text-xl font-bold mb-6 text-black shadow-sm">1</div>
+                    <span class="text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mb-2">Step 1</span>
+                    <h3 class="text-xl font-bold text-black mb-3">Business Discovery</h3>
+                    <p class="text-gray-600 text-sm">We understand your goals, challenges, and requirements.</p>
+                </div>
+                
+                <div class="relative z-10 text-center flex flex-col items-center">
+                    <div class="w-20 h-20 bg-white border border-gray-200 rounded-full flex items-center justify-center text-xl font-bold mb-6 text-black shadow-sm">2</div>
+                    <span class="text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mb-2">Step 2</span>
+                    <h3 class="text-xl font-bold text-black mb-3">Growth Strategy</h3>
+                    <p class="text-gray-600 text-sm">We create a customized roadmap for your business.</p>
+                </div>
+                
+                <div class="relative z-10 text-center flex flex-col items-center">
+                    <div class="w-20 h-20 bg-white border border-gray-200 rounded-full flex items-center justify-center text-xl font-bold mb-6 text-black shadow-sm">3</div>
+                    <span class="text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mb-2">Step 3</span>
+                    <h3 class="text-xl font-bold text-black mb-3">Execution</h3>
+                    <p class="text-gray-600 text-sm">Our team handles everything from implementation to optimization.</p>
+                </div>
+                
+                <div class="relative z-10 text-center flex flex-col items-center">
+                    <div class="w-20 h-20 bg-black text-white border border-black rounded-full flex items-center justify-center text-xl font-bold mb-6 shadow-lg">4</div>
+                    <span class="text-xs font-bold tracking-[0.2em] uppercase text-black mb-2">Step 4</span>
+                    <h3 class="text-xl font-bold text-black mb-3">Scale</h3>
+                    <p class="text-gray-600 text-sm">Continuous improvement and growth support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="py-24 border-b border-black/5 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <h2 class="text-4xl md:text-5xl font-black mb-6 text-gradient-bw">Meet The Team</h2>
+                <p class="text-lg text-gray-600 font-light">The experts driving your business growth.</p>
+            </div>
+
+            <!-- Founder Block -->
+            <div class="glass-card rounded-3xl p-8 md:p-12 mb-12 flex flex-col md:flex-row gap-10 items-center border border-gray-200 bg-gray-50/50">
+                <div class="flex-shrink-0">
+                    <img src="https://www.dropbox.com/scl/fi/7qobl0hi4u4j5wxawicuq/Yogesh.png?rlkey=6avzx5ujf958lu4pgw3bexybc&st=30iflg0q&raw=1" alt="Yogesh Meena" class="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover border-4 border-white shadow-xl bg-gray-100">
+                </div>
+                <div>
+                    <h3 class="text-3xl font-bold text-black mb-2">Yogesh Meena</h3>
+                    <p class="text-gray-500 font-bold tracking-wider uppercase text-sm mb-6 pb-6 border-b border-gray-200">Founder & Growth Strategist</p>
+                    <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-4">
+                        Yogesh Meena is a performance marketing and eCommerce growth specialist with extensive experience helping brands scale across Amazon, Flipkart, JioMart, Shopify, GeM and other leading marketplaces. He has successfully managed multi-crore advertising budgets, optimized thousands of product listings, and developed data-driven growth strategies that deliver measurable business results.
+                    </p>
+                    <p class="text-black font-medium text-sm md:text-base leading-relaxed">
+                        With expertise spanning Marketplace Management, Amazon PPC, Meta Ads, Google Ads, SEO, Analytics and Conversion Optimization, Yogesh focuses on building sustainable growth engines that maximize revenue, profitability and customer lifetime value.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Team Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="glass-card rounded-2xl p-8 flex flex-col items-center text-center bg-white border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+                    <img src="https://www.dropbox.com/scl/fi/qcj6ooinamyzdedvu9mmh/Jayshree.png?rlkey=xkpsfaoqsdhkehrs5hjzc31od&st=b29jfd1y&raw=1" alt="Jayshree Jangir" class="w-32 h-32 rounded-full object-cover mb-6 border-4 border-white shadow-md bg-gray-100">
+                    <h4 class="text-xl font-bold text-black mb-1">Jayshree Jangir</h4>
+                    <p class="text-gray-500 text-sm uppercase tracking-wide font-medium">Performance Marketing Lead</p>
+                </div>
+                <div class="glass-card rounded-2xl p-8 flex flex-col items-center text-center bg-white border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+                    <img src="https://www.dropbox.com/scl/fi/sfucxlwbdd0l37uwonr9j/Manish.png?rlkey=2j8rsyfymxqmgbfw329dedsf7&st=rx4rc3am&raw=1" alt="Manish Dakha" class="w-32 h-32 rounded-full object-cover mb-6 border-4 border-white shadow-md bg-gray-100">
+                    <h4 class="text-xl font-bold text-black mb-1">Manish Dakha</h4>
+                    <p class="text-gray-500 text-sm uppercase tracking-wide font-medium">Finance Head</p>
+                </div>
+                <div class="glass-card rounded-2xl p-8 flex flex-col items-center text-center bg-white border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+                    <img src="https://www.dropbox.com/scl/fi/22pyut8cpt8sww73qpo8l/Jitendra.png?rlkey=zff0upau5p60fttuv5g7tbjvr&st=fr2bx3s6&raw=1" alt="Jitendra Tatu" class="w-32 h-32 rounded-full object-cover mb-6 border-4 border-white shadow-md bg-gray-100">
+                    <h4 class="text-xl font-bold text-black mb-1">Jitendra Tatu</h4>
+                    <p class="text-gray-500 text-sm uppercase tracking-wide font-medium">Technical Consultant</p>
+                </div>
+                <div class="glass-card rounded-2xl p-8 flex flex-col items-center text-center bg-white border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+                    <img src="https://www.dropbox.com/scl/fi/dwc6aslicglp0zwzypd1z/Tiny.png?rlkey=5rsrlmmthvawh1fom8653yrwk&st=vlmyk5hm&raw=1" alt="Lucas" class="w-32 h-32 rounded-full object-cover mb-6 border-4 border-white shadow-md bg-gray-100">
+                    <h4 class="text-xl font-bold text-black mb-1">Lucas</h4>
+                    <p class="text-gray-500 text-sm uppercase tracking-wide font-medium">Web/App Developer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="py-24 border-b border-black/5 bg-gray-50/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <h2 class="text-4xl md:text-5xl font-black mb-6 text-gradient-bw">Pricing</h2>
+                <p class="text-lg text-gray-600 font-light">Transparent plans for every stage of your growth.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Starter -->
+                <div class="glass-card rounded-3xl p-8 flex flex-col bg-white">
+                    <h3 class="text-2xl font-bold text-black mb-2">Starter</h3>
+                    <p class="text-gray-500 mb-6 h-12 text-sm">Perfect for small businesses.</p>
+                    <div class="mb-8">
+                        <span class="text-4xl font-black text-black">₹9,999</span>
+                        <span class="text-gray-500">/mo</span>
+                    </div>
+                    <button class="w-full py-3 px-6 rounded-full border border-gray-300 text-black font-bold hover:bg-gray-100 transition-colors mt-auto uppercase tracking-wide text-sm">Select Plan</button>
+                </div>
+
+                <!-- Growth (Highlighted) -->
+                <div class="bg-black rounded-3xl p-8 flex flex-col transform lg:-translate-y-4 shadow-xl relative border border-black">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-white text-black text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest border border-gray-200 shadow-sm">Popular</div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Growth</h3>
+                    <p class="text-gray-400 mb-6 h-12 text-sm">Ideal for growing brands.</p>
+                    <div class="mb-8">
+                        <span class="text-4xl font-black text-white">₹24,999</span>
+                        <span class="text-gray-400">/mo</span>
+                    </div>
+                    <button class="w-full py-3 px-6 rounded-full bg-white text-black font-bold hover:bg-gray-200 transition-colors mt-auto uppercase tracking-wide text-sm shadow-md">Select Plan</button>
+                </div>
+
+                <!-- Pro -->
+                <div class="glass-card rounded-3xl p-8 flex flex-col bg-white">
+                    <h3 class="text-2xl font-bold text-black mb-2">Business Pro</h3>
+                    <p class="text-gray-500 mb-6 h-12 text-sm">Complete business management solution.</p>
+                    <div class="mb-8">
+                        <span class="text-4xl font-black text-black">₹49,999</span>
+                        <span class="text-gray-500">/mo</span>
+                    </div>
+                    <button class="w-full py-3 px-6 rounded-full border border-gray-300 text-black font-bold hover:bg-gray-100 transition-colors mt-auto uppercase tracking-wide text-sm">Select Plan</button>
+                </div>
+
+                <!-- Enterprise -->
+                <div class="glass-card rounded-3xl p-8 flex flex-col bg-gradient-to-br from-gray-50 to-white border-gray-200">
+                    <h3 class="text-2xl font-bold text-black mb-2">Enterprise</h3>
+                    <p class="text-gray-500 mb-6 h-12 text-sm">For large businesses and organizations.</p>
+                    <div class="mb-8 mt-2">
+                        <span class="text-3xl font-black text-black">Custom Pricing</span>
+                    </div>
+                    <button class="w-full py-3 px-6 rounded-full border border-gray-300 text-black font-bold hover:bg-gray-100 transition-colors mt-auto uppercase tracking-wide text-sm">Contact Us</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 border-b border-black/5 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-4xl md:text-5xl font-black mb-6 text-gradient-bw">Testimonials</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="glass-card p-10 rounded-3xl relative bg-gray-50/80">
+                    <div class="text-black mb-4 tracking-widest text-lg">★★★★★</div>
+                    <p class="text-xl font-medium text-gray-700 leading-relaxed mb-6 italic">
+                        "HaHaKaar helped us launch our brand and increase online sales significantly."
+                    </p>
+                </div>
+
+                <div class="glass-card p-10 rounded-3xl relative bg-gray-50/80">
+                    <div class="text-black mb-4 tracking-widest text-lg">★★★★★</div>
+                    <p class="text-xl font-medium text-gray-700 leading-relaxed mb-6 italic">
+                        "Our Amazon business became profitable within months."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-32 relative overflow-hidden bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-5xl md:text-6xl font-black text-black mb-6">Ready to Grow Your Business?</h2>
+            <p class="text-xl text-gray-600 mb-12 font-light">Let's discuss your business goals and create a customized growth strategy.</p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-8 mb-12">
+                <div class="flex items-center gap-3 text-black text-lg">
+                    <div class="w-12 h-12 bg-gray-100 border border-gray-200 rounded-full flex items-center justify-center"><i class="ph-bold ph-phone text-xl"></i></div>
+                    <span class="font-bold">+91 XXXXX XXXXX</span>
+                </div>
+                <div class="hidden sm:block w-px h-10 bg-gray-300"></div>
+                <div class="flex items-center gap-3 text-black text-lg">
+                    <div class="w-12 h-12 bg-gray-100 border border-gray-200 rounded-full flex items-center justify-center"><i class="ph-bold ph-envelope-simple text-xl"></i></div>
+                    <span class="font-bold">hello@hahakaar.com</span>
+                </div>
+            </div>
+
+            <button class="btn-gradient px-12 py-5 rounded-full font-black text-lg tracking-widest uppercase shadow-lg hover:shadow-xl">
+                Schedule Free Consultation
+            </button>
+        </div>
+    </section>
+
+    <footer class="bg-gray-50 text-gray-600 py-16 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-10 mb-12">
+                <div class="col-span-1 lg:col-span-2">
+                    <div class="flex items-center gap-2 mb-6">
+                        <span class="font-black text-2xl tracking-widest text-black uppercase">Haha<span class="text-gradient-bw">kaar</span></span>
+                    </div>
+                    <p class="text-gray-500 mb-6 max-w-sm text-sm leading-relaxed">Your complete business growth partner. Build, brand, and grow your empire with our comprehensive solutions.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-black font-bold mb-6 uppercase tracking-wider text-sm">Company</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-black transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-black transition-colors">Story, Mission, Vision</a></li>
+                        <li><a href="#team" class="hover:text-black transition-colors">Team</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-black font-bold mb-6 uppercase tracking-wider text-sm">Resources</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#services" class="hover:text-black transition-colors">Services</a></li>
+                        <li><a href="#" class="hover:text-black transition-colors">Portfolio</a></li>
+                        <li><a href="#pricing" class="hover:text-black transition-colors">Pricing</a></li>
+                        <li><a href="#" class="hover:text-black transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-black font-bold mb-6 uppercase tracking-wider text-sm">Connect</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#contact" class="hover:text-black transition-colors">Contact Form</a></li>
+                        <li><a href="#" class="flex items-center gap-2 text-gray-600 hover:text-black transition-colors"><i class="ph-fill ph-whatsapp-logo text-lg text-green-600"></i> WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs tracking-wide">
+                <p>&copy; 2026 HaHaKaar Business Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
